@@ -1,12 +1,18 @@
-import { Button } from './components/ui/button'
+import { Route, Routes } from 'react-router-dom'
+import Header from './components/Header'
 import './index.css'
+import Home from './pages/Home'
+import Compiler from './pages/Compiler'
 
 function App() {
 
   return (
     <>
-     <h1>Ayan Mirza</h1>
-      <Button>Click me</Button>
+    <Header/>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/compiler' element={<Compiler/>}/>
+    </Routes>
     </>
   )
 }
